@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# add debug flag
+if [ $CF_DEBUG ]; then
+        echo "ENABLING DEBUG MODE"
+        set -x
+fi
+
 log() {
 	echo "   $*" 1>&2
 }
